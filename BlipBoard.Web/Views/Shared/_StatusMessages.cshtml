@@ -1,0 +1,18 @@
+﻿@{ 
+    var json = (String)TempData[BlipBoard.Controllers.BaseController.CrossRequestMessageProperty];
+
+    BlipBoard.Controllers.CrossRequestMessage msg = null;
+
+    if (!String.IsNullOrWhiteSpace(json))
+    {
+        msg = JsonConvert.DeserializeObject<BlipBoard.Controllers.CrossRequestMessage>(json);
+    }
+}
+
+@if (msg != null)
+{
+<div class="alert alert-@msg.Level alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    @msg.Message
+</div>
+}

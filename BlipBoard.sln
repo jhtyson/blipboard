@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlipBoard.Web", "BlipBoard.Web\BlipBoard.Web.csproj", "{F71ACED9-2599-46CF-ADDE-ADD9AFE908DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlipBoard.Core", "BlipBoard.Core\BlipBoard.Core.csproj", "{D9B80487-F8F9-431E-8DAD-F83E754DB468}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F71ACED9-2599-46CF-ADDE-ADD9AFE908DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F71ACED9-2599-46CF-ADDE-ADD9AFE908DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F71ACED9-2599-46CF-ADDE-ADD9AFE908DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F71ACED9-2599-46CF-ADDE-ADD9AFE908DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B80487-F8F9-431E-8DAD-F83E754DB468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B80487-F8F9-431E-8DAD-F83E754DB468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B80487-F8F9-431E-8DAD-F83E754DB468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B80487-F8F9-431E-8DAD-F83E754DB468}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A85BFD63-9B0E-4A8F-AB81-D93B27017C62}
+	EndGlobalSection
+EndGlobal

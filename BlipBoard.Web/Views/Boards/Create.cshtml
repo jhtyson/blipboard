@@ -1,0 +1,24 @@
+﻿@model BlipBoard.Data.Board
+
+@{
+    ViewData["Title"] = "New Board";
+}
+
+<h1 class="display-4">
+    Create a new Board
+</h1>
+
+<p class="mb-5">
+    A board just needs a name. You will get an endpoint to log to and a link to view under.
+</p>
+
+<div>
+    <form method="post">
+        <div class="form-group" pf-validation-for="Name" pf-validationerror-class="is-invalid">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary float-right">Create Board</button>
+    </form>
+</div>

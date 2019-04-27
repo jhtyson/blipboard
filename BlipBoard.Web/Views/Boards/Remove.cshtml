@@ -1,0 +1,20 @@
+﻿@model BlipBoard.Data.Board
+
+@{
+    ViewData["Title"] = "New Board";
+}
+
+<h1 class="display-4">
+    Remove Board
+</h1>
+
+<p class="mb-5">
+    Are you sure you want to remove the board named <em>@Model.Name</em>?
+</p>
+
+<div>
+    <form method="post">
+        <button type="submit" class="btn btn-danger float-right">Remove Board</button>
+        <a class="float-right btn btn-link mr-2" asp-action="Index">Cancel</a>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .title-board-wrapper {
+        /*max-width: 930px;*/
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome!</h1>
+    <p>This is a Blipboard:</p>
+    <p class="title-board-wrapper embed-responsive embed-responsive-21by9">
+        <iframe class="embed-responsive-item" src="https://blipboardjs.azurewebsites.net"></iframe>
+    </p>
+    <p>The little blips represent logging events from one of my applications. The columns represent my logging channels.</p>
+    <p>The timescale is logarithmic so that recent events are seen in a higher time resolution than older events. The board covers three months.</p>
+    <p>I have this on a big screen in my office. When I come in in the morning I can see what's up before I get out of my jacket.</p>
+    <p><a href="@Url.Action("Details")">You can have this too.</a></p>
+</div>

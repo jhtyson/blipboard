@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  background: black;
+}
+
+.chrome {
+  position: relative;
+}
+
+.chrome > svg {
+  height: 100%;
+  width: 100%;
+}
+
+.chrome > .status-bar {
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+
+/* Details */
+
+.details {
+  font-family: "Fira Mono", monospace;
+  font-size: 20px;
+  line-height: initial;
+
+  white-space: pre;
+}
+
+/* Board */
+
+.lane:hover {
+  fill: rgb(34, 34, 34);
+}
+
+.blip {
+  fill: blue;
+}
+
+.blip.l0 {
+  fill: rgb(34, 34, 34);
+}
+.blip.l1 {
+  fill: rgb(75, 75, 75);
+}
+.blip.l2 {
+  fill: gray;
+}
+.blip.l3 {
+  fill: orangered;
+}
+.blip.l4 {
+  fill: red;
+}
+.blip.l4 {
+  fill: red;
+}

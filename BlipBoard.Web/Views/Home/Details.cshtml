@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row mt-5">
+    <div class="col-lg-8 offset-lg-2">
+        <h1 class="display-4">Welcome!</h1>
+        <p>
+            The BlipBoard is a logging event collector and display. The displays are simple web pages on which all events visually appear
+            shortly after they are sent to an endpoint via http.
+        </p>
+        <p>
+            It's still experimental and doesn't scale at all. If fully expect it to break down once I get my first users.
+            However, I can improve it and make it scale, and you can host it yourself, too, if you need your own instance.#
+            I think it's already very useful in the state it's in and I'm happy about all who want to give it a go.
+        </p>
+       <p>
+           Just create an account, create a board and start viewing and logging.
+        </p>
+        <p class="text-right">
+            <a class="btn btn-lg btn-primary" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </p>
+    </div>
+</div>

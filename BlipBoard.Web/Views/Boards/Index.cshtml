@@ -1,0 +1,37 @@
+﻿@model BlipBoard.Data.Board[]
+
+@{
+    ViewData["Title"] = "Boards";
+}
+
+<div>
+    <div class="float-right">
+        <a asp-action="Create">✚ Create new board</a>
+    </div>
+
+    <h1 class="display-4">
+        Your boards
+    </h1>
+
+    @if (Model.Length > 0)
+    {
+    <div class="row mt-5">
+        @foreach (var board in Model)
+        {
+            <div class="card col-lg-3">
+                <div class="card-body">
+                    <h5 class="card-title">@board.Name</h5>
+                    <a asp-action="Remove" asp-route-id="@board.Id">Remove</a>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="@Url.Action("View", new { id = board.Id })" class="card-link">View</a>
+                    <a href="@Url.Action("Test", new { id = board.Id })" class="card-link">Test</a>
+                </div>
+            </div>
+        }
+    </div>
+    }
+    else
+    {
+        <div style="margin: 100px 0 0 0" class="text-center">You don't have any boards yet. Create one with the button in the top right corner.</div>
+    }
+</div>
