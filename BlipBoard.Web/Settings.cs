@@ -8,5 +8,7 @@ namespace BlipBoard.Web
     public class Settings
     {
         public String BasePath { get; set; }
+
+        public StreamSettings Stream { get; set; }
     }
 }

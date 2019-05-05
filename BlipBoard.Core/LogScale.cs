@@ -2,6 +2,17 @@
 
 namespace BlipBoard
 {
+    public class ScaleSettings
+    {
+        public TimeSpan TimeBegin { get; set; }
+        public TimeSpan TimeEnd { get; set; }
+
+        public Double DisplayBegin { get; set; }
+        public Double DisplayEnd { get; set; }
+
+        public Double BlipSize { get; set; }
+    }
+
     public interface IScale
     {
         Double Scale(Int64 t);

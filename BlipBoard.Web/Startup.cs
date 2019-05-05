@@ -47,9 +47,6 @@ namespace BlipBoard
 
             services.Configure<Settings>(Configuration);
 
-            services.AddSingleton<BoardManager>();
-            services.AddSingleton<BoardGuardian>();
-
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
