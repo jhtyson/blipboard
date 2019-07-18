@@ -12,6 +12,8 @@ namespace BlipBoard.Data
     {
         public Guid Id { get; set; }
 
+        public Guid EnpointId { get; set; }
+
         [StringLength(100)]
         public String Name { get; set; }
 
@@ -22,6 +24,21 @@ namespace BlipBoard.Data
         public String OwnerId { get; set; }
 
         public BoardUser Owner { get; set; }
+    }
+
+    public class Lane
+    {
+        [StringLength(250)]
+        public String OwnerId { get; set; }
+
+        public BoardUser Owner { get; set; }
+
+        [StringLength(80)]
+        public String Name { get; set; }
+
+        public Int32 LaneNumber { get; set; }
+
+        public DateTimeOffset ResetAt { get; set; }
     }
 
     public class BoardUser : IdentityUser
@@ -35,6 +52,11 @@ namespace BlipBoard.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Lane>().HasOne(e => e.Owner).WithMany();
         }
     }
 }

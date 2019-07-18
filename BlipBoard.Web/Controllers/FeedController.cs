@@ -8,17 +8,17 @@ namespace BlipBoard.Controllers
     [Route("api/feed")]
     public class FeedController : ControllerBase
     {
-        private readonly BoardManager boardManager;
+        //private readonly BoardManager boardManager;
 
-        [HttpGet("all")]
-        public Blip[] GetAllBlips(Guid id) => boardManager.GetRepo(id).GetAllBlips();
+        //[HttpGet("all")]
+        //public Blip[] GetAllBlips(Guid id) => boardManager.GetRepo(id).GetAllBlips();
 
-        [HttpGet("latest")]
-        public Blip[] GetLatestBlips(Guid id, Int64 since) => boardManager.GetRepo(id).GetBlipsSince(since);
+        //[HttpGet("latest")]
+        //public Blip[] GetLatestBlips(Guid id, Int64 since) => boardManager.GetRepo(id).GetBlipsSince(since);
 
-        public FeedController(BoardManager boardManager)
-        {
-            this.boardManager = boardManager;
-        }
+        //public FeedController(BoardManager boardManager)
+        //{
+        //    this.boardManager = boardManager;
+        //}
     }
 }

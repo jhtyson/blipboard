@@ -9,11 +9,11 @@ namespace BlipBoard.Web
 {
     public class Ingres
     {
-        private readonly BoardManager boardManager;
+        private readonly Application application;
 
-        public Ingres(BoardManager boardManager)
+        public Ingres(Application application)
         {
-            this.boardManager = boardManager;
+            this.application = application;
         }
 
         static readonly Char[] Ws = { ' ', '\n', '\r' };
@@ -70,6 +70,7 @@ namespace BlipBoard.Web
 
             if (String.IsNullOrWhiteSpace(line)) return GetResponse(context, 400, "No body present");
 
+            application.Hit(boardId, )
             boardManager.GetRepo(boardId).Add(level, line, body);
 
             return GetResponse(context, 200);

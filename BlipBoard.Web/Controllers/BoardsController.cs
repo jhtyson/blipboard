@@ -12,14 +12,10 @@ namespace BlipBoard.Controllers
     public class BoardsController : BaseController
     {
         private readonly ApplicationDbContext db;
-        private readonly BoardManager boardManager;
-        private readonly BoardGuardian boardGuardian;
 
-        public BoardsController(ApplicationDbContext db, BoardManager boardManager, BoardGuardian boardGuardian)
+        public BoardsController(ApplicationDbContext db)
         {
             this.db = db;
-            this.boardManager = boardManager;
-            this.boardGuardian = boardGuardian;
         }
 
         public IActionResult Index()
@@ -61,7 +57,7 @@ namespace BlipBoard.Controllers
 
             AddSuccessMessage("New Board was created");
 
-            boardGuardian.Invalidate(boardId);
+            //boardGuardian.Invalidate(boardId);
 
             return Redirect(nameof(Index));
         }
@@ -75,7 +71,7 @@ namespace BlipBoard.Controllers
 
             if (board == null) return NotFound();
 
-            boardGuardian.Invalidate(id);
+            //boardGuardian.Invalidate(id);
 
             return View(board);
         }
@@ -133,11 +129,11 @@ namespace BlipBoard.Controllers
         [HttpGet("{id}/test")]
         public IActionResult Test(Guid id)
         {
-            var repo = boardManager.GetRepo(id);
+            //var repo = boardManager.GetRepo(id);
 
-            var rnd = new Random();
+            //var rnd = new Random();
 
-            repo.Add(Level.Error, "test-" + rnd.Next(1, 4), "test42");
+            //repo.Add(Level.Error, "test-" + rnd.Next(1, 4), "test42");
 
             return Redirect(Url.Action(nameof(Index)));
         }
